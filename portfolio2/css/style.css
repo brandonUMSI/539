@@ -1,0 +1,184 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background-color: #ddd;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+
+h1{
+    font-size: 50px;
+    line-height: 1;
+    padding: 50px 0;
+    text-align: center;
+}
+  
+h2{
+    font-size: 32px;
+    line-height: 1.5;
+}
+
+p{
+    font-size: 50px;
+    line-height: 1;
+    padding: 50px 0;
+    text-align: center;
+}
+nav ul{
+    list-style-type: none;
+}
+  
+nav li{
+    padding-bottom: 30px;
+    display: inline;
+    margin: 15px;
+}
+  
+nav a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+  
+nav a:hover{
+    text-decoration: underline;
+}
+  
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top:-40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+
+
+.skip a:focus{
+    top: 0px;
+}
+    
+:focus{
+    border: 2px solid black;
+}
+
+
+footer{
+    background-color: black;
+    color: white;
+    grid-column: 1 / -1; 
+    grid-row-start: 13;
+    grid-row-end: 13;
+    padding-top: 30px;
+    text-align: center;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 100px 500px 100px;
+    grid-gap: 15px;   
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto; 
+    width: 100vw; 
+}
+.nav{
+    
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    text-align: left; 
+   
+    background-color: #ddd;
+    padding: 20px 0;  
+}
+.intro{
+    grid-column: 1 / span 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    max-height: 700px;
+    text-align: center;
+
+    
+}
+
+
+.learn{
+    
+    grid-column: 1 / span 4;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    max-height: 700px;
+    overflow: hidden;
+}
+
+.cflc{
+    
+    grid-column: 1 / span 4;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    max-height: 700px;
+    overflow: hidden;
+}
+
+
+
+.goodnews{
+    
+    grid-column: 1 / span 4;
+    grid-row-start: 6;
+    grid-row-end: 6;
+    max-height: 700px;
+    overflow: hidden;
+}
+
+.highway{
+    
+    grid-column: 1 / span 4;
+    grid-row-start: 7;
+    grid-row-end: 7;
+    max-height: 700px;
+    overflow: hidden;
+}
+
+.salem{
+    
+    grid-column: 1 / span 4;
+    grid-row-start: 8;
+    grid-row-end: 8;
+    max-height: 700px;
+    overflow: hidden;
+}
+
+.umoja{
+    
+    grid-column: 1 / span 4;
+    grid-row-start: 9;
+    grid-row-end: 9;
+    max-height: 700px;
+    overflow: hidden;
+}
+
+.about{
+    grid-column: 1 / span 4;
+    grid-row-start: 10;
+    grid-row-end: 10;
+}
+
+.contact{
+    grid-column: 1 / span 4;
+    grid-row-start: 11;
+    grid-row-end: 11;
+}
+
+.message{
+    grid-column: 1 / span 4;
+    grid-row-start: 12;
+    grid-row-end: 12;
+}
