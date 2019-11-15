@@ -11,7 +11,15 @@ body{
     background-image:
       linear-gradient(to right,rgb(245, 245, 245) 2px, transparent 2px),
       linear-gradient(to bottom, rgb(245,245,245) 2px, transparent 2px);  
+      border : 12px;
+      border-style : solid;
+      border-color:#49BBCC;
   }
+
+.nav ul li a.activep 
+{
+  color:#49BBCC;
+}
 
 h1{
     font-size: 113px;
@@ -50,6 +58,7 @@ p{
 nav ul{
     list-style-type: none;
     text-align: right;
+    padding:15px;
 }
 nav li{
     padding-bottom: 30px;
@@ -64,6 +73,7 @@ nav a{
 } 
 nav a:hover{
     text-decoration: underline;
+   
 }
 .skip a{
     background: white;
@@ -75,7 +85,21 @@ nav a:hover{
     transition: top 1s ease-out;
     z-index: 1;
 }
+.nav .subnav{
+    visibility: hidden;
+    display:inline;
+    -webkit-transition: visibility 2s ;
+    transition: visibility 2s ;
+   
+    
+}
 
+.nav:hover .subnav{
+    width:100%;
+    visibility:visible
+    
+   
+}
 .skip a:focus{
     top: 0px;
 }
@@ -114,6 +138,11 @@ footer{
     
 }
 
+.cform{
+    padding: 15px;
+}
+
+
 #submit{
     width: 100%;
     font-size: 24pt;
@@ -132,7 +161,20 @@ footer{
     padding: 15px;
 }
 
+
+
+
+
 @media screen and (min-width: 300px){
+    .nav ul{
+        display:flex;
+    }
+    .nav .subnav{
+        visibility:hidden
+    }
+    .nav:hover .subnav{
+        visibility: hidden;
+    }
     .intro{
         text-align: center;
     }
@@ -153,31 +195,42 @@ footer{
         padding: 15px 0;
     }
     .container{
-        padding-top : 0px;
-        padding-bottom: 0px;
+        padding: 15px;
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 0px;   
         grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
-        width: 100vw; 
         grid-gap: 0px;
         text-align: center;
         margin: 0px;
+        max-width:100%;
 
     }
+   
+
     .learn{
-    
+
         grid-column: 1 / span 3;
         grid-row-start: 1;
         grid-row-end: 2;
-        max-height: 700px;
-        overflow: hidden;
-        width: 100%;
         text-align: center;
-        padding: 15px;
+        max-width:100%;
         
+        
+        
+       
+        
+       
         
     }
+
+    .learn img{
+        max-width:100%;
+    }
+
+
+
+    
     
 
     .learninfo{
@@ -185,22 +238,26 @@ footer{
         grid-column: 1 / span 3;
         grid-row-start: 3;
         grid-row-end: 4;
-        max-height: 700px;
+        
+        
         overflow: hidden;
-        width: 100%;
+        
+       
         text-align: center;
-        padding: 25px;
+        
        
         
     }
     
     
     .learninfo p{
-        margin-right:0px;
-        padding-top: 0px;
         text-align: center;
-        padding: 15px;
+        
+       
+       
     }
+
+
 
     
     
@@ -209,19 +266,19 @@ footer{
         grid-column: 1 / span 3;
         grid-row-start: 7;
         grid-row-end: 8;
-        max-height: 700px;
         overflow: hidden;
         width: 100%;
         text-align: center;
-        padding: 15px;
         
     }
 
     .gni p{
-        margin-right:0px;
-        padding-top: 0px;
         text-align: center;
-        padding: 15px;
+       
+    }
+
+    .goodnews img{
+        max-width:100%;
     }
     
     
@@ -229,19 +286,20 @@ footer{
         grid-column: 1 / span 3;
         grid-row-start: 11;
         grid-row-end: 12;
-        max-height: 700px;
         overflow: hidden;
         width: 100%;
         text-align: center;
-        padding: 15px;
+        
     
     }
 
     .saleminfo p{
-        margin-right:0px;
-        padding-top: 0px;
         text-align: center;
-        padding: 15px;
+        
+    }
+
+    .salem img{
+        max-width:100%;
     }
 
     
@@ -250,11 +308,7 @@ footer{
         grid-column: 1 / span 3;
         grid-row-start: 5;
         grid-row-end: 6;
-        max-height: 700px;
-        overflow: hidden;
-        width: 100%;
-        text-align: center;
-        padding: 25px;
+        text-align:center;
     }
     
     .salem{
@@ -262,10 +316,8 @@ footer{
         grid-column: 1 / span 3;
         grid-row-start: 9;
         grid-row-end: 10;
-        max-height: 700px;
-        overflow: hidden;
         text-align: center;
-        padding: 25px;
+        
     }
     .nav ul{
         text-align:center;
@@ -278,11 +330,10 @@ footer{
     
     }
     .story{
-        border : 12px;
-        border-style : solid;
-        border-color:#49BBCC;
+        
         margin: 0px;
         text-align: center;
+        padding:15px;
     }
 
     .team{
@@ -292,6 +343,12 @@ footer{
         margin: 0px;
         font-size: 24pt;  
         text-align:center;
+        padding:15px;
+        
+    }
+
+    .team ul{
+        list-style:none;
     }
 
     .objective{
@@ -301,20 +358,20 @@ footer{
         margin:0px;
         font-size: 24pt; 
         text-align:center;
-        border : 12px;
-        border-style : solid;
-        border-color:#49BBCC;
+        padding:15px;
+        
         
     }
     .objective p{
         font-size: 24pt;
-        text-align: left;
+        text-align: center;
     }
 
     .learncontainer2{
         display: grid;
         grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto auto auto auto auto auto auto;  
+        grid-template-rows: auto auto auto auto auto auto auto auto; 
+        padding:15px; 
     }
 
     .projectsolution{
@@ -322,9 +379,8 @@ footer{
         grid-row-start: 1;
         grid-row-end: 3;
         border : 12px;
-        border-style : solid;
-        border-color:#49BBCC;
         text-align: center;
+        
     }
 
     .transitionimage{
@@ -335,7 +391,8 @@ footer{
         background-size: cover;       
         color: white;
         height: 500px;
-        margin: 0px;                
+        margin: 0px;
+        max-width:100%;                
     }
 
     .transitionimage2{
@@ -345,7 +402,8 @@ footer{
         background-repeat: no-repeat; 
         background-size: cover;       
         color: white;
-        height: 500px;  
+        height: 500px;
+        max-width:100%;  
                     
     }
 
@@ -357,15 +415,15 @@ footer{
         background-size: cover;       
         color: white;
         height: 500px; 
+        max-width:100%;
+        
             
     }
     .des{
         grid-column: 1 span 3;
         grid-row-start: 4;
         grid-row-end: 6;
-        border : 12px;
-        border-style : solid;
-        border-color:#49BBCC;
+        
         text-align: center;
     }
 
@@ -375,68 +433,101 @@ footer{
         grid-row-start: 4;
         grid-row-end: 6;
         text-align: center;
+        padding-top: 3px;
+       
+        
+    }
+    .desgn img{
+        max-width:100%;
+        
+        
     }
 
     .next{
         grid-column: 1 span 3;
         grid-row-start: 7;
         grid-row-end: 9;
-        border : 12px;
-        border-style : solid;
-        border-color:#49BBCC;
+        
         text-align: center;
+        
     }
 
     
     .introbox{
         display: flex;
-        flex-wrap: nowrap; 
-        margin: 50px; 
+        flex-flow: column nowrap;
+        overflow: hidden;
+        padding: 15px;
+        
         
     }
-    .introimg{
-    padding-left:350px;
-    padding-top: 50px;
+
+    .introimg img{
+        overflow:hidden;
+        max-width:100%;
     }
+    
+    
+        
     .aboutbox{
-        margin: 150px;
+        
         display: flex;
         align-content: space-between;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
         align-content: space-between;
+        overflow:hidden;
+        padding: 15px;
+       
     }
     .about2 p{
         padding: 0px;
-        text-align:left;
+        text-align: center;
+        padding:15px;
     }
     
-    .abtimg{
-        padding-left: 50px;
-    }
+    
 
     .about2{
         text-align: center;
+       
     }
 
+    .abtimg img{
+       overflow: hidden;
+       max-width:100%;
+       
+       
+        
+    }
+
+    
+
     .problembox{
-        margin: 165px;
+        
         display: flex;
         flex-wrap: nowrap; 
         align-content: space-between;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
+        overflow:hidden;
+        padding: 15px;
+       
 
     }
 
-    .problemimage{
-        padding-right: 50px;
-    }
-
+    
     .problemsolving{
         text-align: center;
+        padding: 15px;
     }
 
     .problemsolving p{
-        text-align: left;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .problemimage img{
+        overflow:hidden;
+        max-width:100%;
     }
 
     .gallery{
@@ -446,7 +537,6 @@ footer{
         justify-content: center;
         min-height: 500px;
         background-color:#49BBCC ;
-        margin: 150px;
         padding : 25px;
     }
 
@@ -457,14 +547,429 @@ footer{
         width: 300px;
         
     }
+
+    .projects{
+        visibility:visible;
+    }
     
 }
 
+@media screen and (min-width: 700px){
+    .projects{
+        visibility:visible;
+    }
+    .nav .subnav{
+        font-size: 0px;;
+        display:inline;
+        -webkit-transition: font-size  5s;
+        transition: font-size  5s ;
+        
+       
+        
+    }
+
+    .projects{
+        visibility:visible;
+    }
     
-@media screen and (min-width: 1400px){
+    .nav:hover .subnav{
+        width:100%;
+        visibility:visible;
+        font-size:15px;
+        
+       
+    }
+    .intro{
+        text-align: center;
+    }
+
+    .intro p{
+        border : 0px;
+        padding : 25px;
+        margin-left : 0px;
+        border-radius: 0px;
+        margin-right: 0px;
+        text-align: center;
+        
+    }
+
+    h1{
+        font-size: 64px;
+        line-height: 1;
+        padding: 15px 0;
+    }
+    .container{
+        padding: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0px;   
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+        grid-gap: 0px;
+        text-align: center;
+        margin: 0px;
+        max-width:100%;
+
+    }
+   
+
+    .learn{
+
+        grid-column: 1 / span 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        text-align: center;
+        max-width:100%;
+        
+        
+        
+       
+        
+       
+        
+    }
+
+    .learn img{
+        max-width:100%;
+    }
+
+
+
+    
+    
+
+    .learninfo{
+    
+        grid-column: 1 / span 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        
+        
+        overflow: hidden;
+        
+       
+        text-align: center;
+        
+       
+        
+    }
+    
+    
+    .learninfo p{
+        text-align: center;
+        
+       
+       
+    }
+
+
+
+    
+    
+    
+    .gni{
+        grid-column: 1 / span 3;
+        grid-row-start: 7;
+        grid-row-end: 8;
+        overflow: hidden;
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    .gni p{
+        text-align: center;
+       
+    }
+
+    .goodnews img{
+        max-width:100%;
+    }
+    
+    
+    .saleminfo{
+        grid-column: 1 / span 3;
+        grid-row-start: 11;
+        grid-row-end: 12;
+        overflow: hidden;
+        width: 100%;
+        text-align: center;
+        
+    
+    }
+
+    .saleminfo p{
+        text-align: center;
+        
+    }
+
+    .salem img{
+        max-width:100%;
+    }
+
+    
+    .goodnews{
+        
+        grid-column: 1 / span 3;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        text-align:center;
+    }
+    
+    .salem{
+        
+        grid-column: 1 / span 3;
+        grid-row-start: 9;
+        grid-row-end: 10;
+        text-align: center;
+        
+    }
     .nav ul{
         text-align:left;
     }
+    .learncontainer{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        
+    
+    }
+    .story{
+        
+        margin: 0px;
+        text-align: center;
+        padding:15px;
+    }
+
+    .team{
+        grid-column: 1 span 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin: 0px;
+        font-size: 24pt;  
+        text-align:center;
+        padding:15px;
+        
+    }
+
+    .team ul{
+        list-style:none;
+    }
+
+    .objective{
+        grid-column: 1 span 3;
+        grid-row-start: 4;
+        grid-row-end: 6;
+        margin:0px;
+        font-size: 24pt; 
+        text-align:center;
+        padding:15px;
+        
+        
+    }
+    .objective p{
+        font-size: 24pt;
+        text-align: center;
+    }
+
+    .learncontainer2{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto; 
+        padding:15px; 
+    }
+
+    .projectsolution{
+        grid-column: 1 span 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        border : 12px;
+        text-align: center;
+        
+    }
+
+    .transitionimage{
+        background-attachment: fixed; 
+        background-image:url("../Images/data.png");  
+        background-position: center;  
+        background-repeat: no-repeat; 
+        background-size: cover;       
+        color: white;
+        height: 500px;
+        margin: 0px;
+        max-width:100%;                
+    }
+
+    .transitionimage2{
+        background-attachment: fixed; 
+        background-image:url("../Images/goodnewspt.png");  
+        background-position: center;  
+        background-repeat: no-repeat; 
+        background-size: cover;       
+        color: white;
+        height: 500px;
+        max-width:100%;  
+                    
+    }
+
+    .transitionimage3{
+        background-attachment: fixed; 
+        background-image:url("../Images/salempar.png");  
+        background-position: center;  
+        background-repeat: no-repeat; 
+        background-size: cover;       
+        color: white;
+        height: 500px; 
+        max-width:100%;
+        
+            
+    }
+    .des{
+        grid-column: 1 span 3;
+        grid-row-start: 4;
+        grid-row-end: 6;
+        
+        text-align: center;
+    }
+
+    .desgn{
+
+        grid-column: 1 span 3;
+        grid-row-start: 4;
+        grid-row-end: 6;
+        text-align: center;
+        padding-top: 3px;
+       
+        
+    }
+    .desgn img{
+        max-width:100%;
+        
+        
+    }
+
+    .next{
+        grid-column: 1 span 3;
+        grid-row-start: 7;
+        grid-row-end: 9;
+        
+        text-align: center;
+        
+    }
+
+    
+    .introbox{
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 15px;
+       
+        
+    }
+    .introimg{
+    
+    text-align: right;
+    
+    }
+    .aboutbox{
+        
+        display: flex;
+        align-content: space-between;
+        flex-flow: column nowrap;
+        align-content: space-between;
+        border : 12px;
+        border-style : solid;
+        border-color:#49BBCC;
+        padding:15px;
+    }
+    .about2 p{
+        
+        text-align:center;
+        padding:15px;
+    }
+    
+    .abtimg{
+       
+        text-align: center;
+    }
+
+    .about2{
+        text-align: center;
+    }
+
+    .problembox{
+        
+        display: flex;
+        flex-wrap: nowrap; 
+        align-content: space-between;
+        flex-flow: column nowrap;
+        border : 12px;
+        border-style : solid;
+        border-color:#49BBCC;
+        padding:15px;
+
+    }
+
+    .problemimage{
+       
+        text-align: center;
+    }
+
+    .problemsolving{
+        text-align: center;
+    }
+
+    .problemsolving p{
+        text-align: center;
+        padding:15px;
+    }
+
+    .gallery{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        min-height: 500px;
+        background-color:#49BBCC ;
+        
+        padding : 25px;
+    }
+
+
+
+    .gallery > img{
+        border: 10px rgb(245, 245, 245) solid;
+        margin: 10px;
+        width: 300px;
+        
+    }
+    
+}
+    
+@media screen and (min-width: 1400px){
+    .nav .subnav{
+        font-size: 0px;;
+        display:inline;
+        -webkit-transition: font-size  5s;
+        transition: font-size  5s ;
+        
+       
+        
+    }
+
+    .projects{
+        visibility:visible;
+    }
+    
+    .nav:hover .subnav{
+        width:100%;
+        visibility:visible;
+        font-size:15px;
+        
+       
+    }
+    .nav ul{
+        text-align:left;
+    }
+   
     .container{
         padding-top : 50px;
         padding-bottom: 50px;
@@ -489,7 +994,7 @@ footer{
         padding : 75px;
         margin-left : 500px;
         border-radius: 50px;
-        margin-right: 0px;
+        margin-right: 15px;
         padding: 25px;
     }
 
@@ -504,6 +1009,7 @@ footer{
         text-align: right;
         padding-bottom: 100px; 
     }
+
 
     .learninfo{
         
@@ -538,6 +1044,7 @@ footer{
     .gni p{
         margin-right:300px;
         padding-top: 0px; 
+        text-align: left;
     }
     .salem{
         
@@ -562,6 +1069,7 @@ footer{
     .saleminfo p{
         margin-right:300px;
         padding-top: 0px;
+        text-align: left;
     }
     .goodnews{
         
@@ -579,10 +1087,12 @@ footer{
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
-        border : 12px;
+        border-top : 12px;
+        border-bottom: 12px;
         border-style : solid;
         border-color:#49BBCC;
-        margin: 200px;
+        
+
     
     }
 
@@ -590,9 +1100,28 @@ footer{
         grid-column: 1 span 1;
         grid-row-start: 1;
         grid-row-end: 2;
-        margin: 100px;
-        font-size: 24pt;  
+        font-size: 24pt; 
+        margin-top: 25%;
+        text-align:right;
+        
+        
     }
+
+    .team li{
+        text-align:right;
+        
+    }
+
+    .team ul{
+        text-align:left;
+        list-style:none;
+        padding:15px;
+    }
+
+    .team p{
+        text-align: center;
+    }
+
 
     .objective{
         grid-column: 2 span 2;
@@ -600,27 +1129,31 @@ footer{
         grid-row-end: 2;
         margin:100px;
         font-size: 24pt; 
+        border : none;
     }
     .objective p{
         font-size: 24pt;
         text-align: left;
     }
 
+    
+
     .learncontainer2{
         display: grid;
         grid-template-columns: auto auto;
-        grid-template-rows: auto auto auto auto auto auto auto auto;  
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+          
     }
 
     .projectsolution{
         grid-column: 1 span 2;
         grid-row-start: 1;
         grid-row-end: 2;
-        margin: 200px;
         border : 12px;
         border-style : solid;
         border-color:#49BBCC;
         text-align: center;
+        padding:15px;
     }
 
     .transitionimage{
@@ -662,8 +1195,20 @@ footer{
         border : 12px;
         border-style : solid;
         border-color:#49BBCC;
-        margin: 200px;
+        
         text-align: center;
+        padding:15px;
+    }
+
+    .des p{
+        padding:15px;
+    }
+
+    .desgn > img{
+        margin: 0px;
+        max-width: 100%;
+        
+        
     }
 
     .desgn{
@@ -671,6 +1216,7 @@ footer{
         grid-row-start: 3;
         grid-row-end: 4;
         text-align: center;
+        max-width: 100%;
     }
 
     .next{
@@ -680,8 +1226,9 @@ footer{
         border : 12px;
         border-style : solid;
         border-color:#49BBCC;
-        margin: 200px;
+        
         text-align: center;
+        padding:15px;
     }
 
     .story{
@@ -690,32 +1237,41 @@ footer{
         border-color:#49BBCC;
         margin: 200px;
         text-align: center;
+        padding:15px;
     }
 
     .introbox{
         display: flex;
-        flex-wrap: nowrap; 
-        margin: 50px; 
+        flex-flow: column nowrap;
+        padding: 15px;
+       
         
     }
     .introimg{
-    padding-left:350px;
-    padding-top: 50px;
+    
+    text-align: right;
+    
     }
     .aboutbox{
         margin: 150px;
         display: flex;
         align-content: space-between;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
         align-content: space-between;
+        border : 12px;
+        border-style : solid;
+        border-color:#49BBCC;
+        padding:15px;
     }
     .about2 p{
-        padding: 0px;
-        text-align:left;
+        
+        text-align:center;
+        padding:15px;
     }
     
     .abtimg{
-        padding-left: 50px;
+       
+        text-align: center;
     }
 
     .about2{
@@ -727,12 +1283,17 @@ footer{
         display: flex;
         flex-wrap: nowrap; 
         align-content: space-between;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
+        border : 12px;
+        border-style : solid;
+        border-color:#49BBCC;
+        padding:15px;
 
     }
 
     .problemimage{
-        padding-right: 50px;
+       
+        text-align: center;
     }
 
     .problemsolving{
@@ -740,7 +1301,8 @@ footer{
     }
 
     .problemsolving p{
-        text-align: left;
+        text-align: center;
+        padding:15px;
     }
 
     .gallery{
@@ -750,7 +1312,7 @@ footer{
         justify-content: center;
         min-height: 500px;
         background-color:#49BBCC ;
-        margin: 150px;
+        
         padding : 25px;
     }
 

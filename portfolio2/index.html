@@ -13,33 +13,39 @@
       <div class="nav">
       <nav>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li aria-label = "home"><a href="index.html" class = "activep">Home</a></li>
+            <li aria-label = "about"><a href="about.html">About</a></li>
+            <li aria-label = "contact"><a href="#contact">Contact</a></li>
+            <li aria-label = "Projects" class = "projects"><a href="#projects">Projects</a></li>
+            <div class = "subnav">
+                <li aria-label = "link to learn play act"><a href="learnplayact.html">learn play act</a></li>
+                <li aria-label = " link to goodnews"><a href="goodnews.html">good news</a></li>
+                <li aria-label = " link to salem"><a href="salem.html">salem</a></li>
+            </div>
           </ul>
       </nav>
     </div>
     <header id = "intro">
-        <div class = "intro">
+        <div class = "intro" aria-label = "introduction">
             <h1>Hi, I'm Brandon</h1>
-            <p>I am a designer, musician, traveler, and creator. I am passionate about serving others and learning from the human experience. I enjoy spending my time telling stories that inspire people to learn, grow, change, and come together. </p>
+            <p>I am a designer, musician, traveler, and creator. I am passionate about serving others and learning from the human experience. I enjoy spending my time telling stories that inspire people to learn, grow, change, and come together. Click on the images below to learn more.</p>
         </div>
     </header>
     <main id = main>
-    <div class = "container">
+    <div class = "container" id = "projects">
 
-        <div class = "learn">
+        <div class = "learn" aria-label = "Learn, Play, Act. Click to view more">
             <a href="learnplayact.html">
-                <img src = "Images/learn.png">
+                <img src = "Images/learn.png" alt = "learn play act">
             </a>
         </div>
         <div class = "learninfo">
             <h3>Learn,Play,Act</h3>
             <p>Working with the city of Gainesville Florida on leveraging city Data and budget resources to foster community engagement, awareness, and governmental transparency through gamification.</p>
         </div>
-        <div class = "goodnews">
+        <div class = "goodnews" aria-label = "Goodnews Click to view more">
             <a href = "goodnews.html">
-                <img src = "Images/learn.png">
+                <img src = "Images/learn.png" alt = "goodnews">
             </a>
         </div>
             
@@ -47,9 +53,9 @@
             <h3>Good News</h3>
             <p>Creating a service that acts as a social platform for non profits to tell authentic and positive stories that engage, inform, and inspire users while increasing  donations and volunteerism to assist underserved people groups.</p>
         </div>
-        <div class = "salem">
+        <div class = "salem"aria-label = "Salem. Click to view more">
             <a href = "salem.html">
-                <img src = "Images/learn.png">
+                <img src = "Images/learn.png" alt = "Salem">
             </a>
         </div>
         <div class = "saleminfo">
@@ -58,17 +64,22 @@
         </div>
     </div>
     </main>
-    <div class="contact">
+    <div class="contact"aria-label = "Contact Request" id = "contact">
         <h2>Lets Work Together!</h2>
-        <form>
+        <form action ="https://formspree.io/myyypqvz" method="POST">
+
                 <fieldset>
-                <label>name:
-                  <input type="name" id="name" name="name" required></label><br>
-                  <label>email:
-                  <input type="email" id="email" name="email" required></label><br>
-                  <label>Can you be contacted by phone?
-                  <input type="checkbox" name="contact request" value="yes" checked></label><br>
-                  <input type = "submit" id = "submit" value = "Submit">
+                <div class = "cform">
+                    <label>name:
+                    <input type="name" id="name" name="name" required></label><br>
+                    <label>email:
+                    <input type="email" id="email" name="email" required></label><br>
+                    <label>phone:
+                    <input type="tel" id="phome" name="phone" required></label><br>
+                    <label>okay to call?
+                    <input type="checkbox" name="contact request" value="yes" checked></label><br>
+                    <input type = "submit" id = "submit" value = "Submit">
+                </div>
           </form>
     </div>
     <footer>
