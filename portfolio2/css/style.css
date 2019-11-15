@@ -2,8 +2,8 @@ html{
     scroll-behavior: smooth;
     
 }
-
-
+/*Link to write up: https://docs.google.com/document/d/1iAC9PHCfthFRi7zE4Hi2PTQR3I1VcQr9EO9t__LrK0c/edit?usp=sharing */
+/*general styles */
 body{
     font-size: 18px;
     padding: 0;
@@ -15,7 +15,13 @@ body{
       border-style : solid;
       border-color:#49BBCC;
   }
-
+/* reduced motion*/
+  @media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto;
+    }
+  }
+/*highlights current page*/
 .nav ul li a.activep 
 {
   color:#49BBCC;
@@ -165,11 +171,12 @@ footer{
 
 
 
-
+/*mobile*/
 @media screen and (min-width: 300px){
     .nav ul{
         display:flex;
     }
+    /*hides animation*/
     .nav .subnav{
         visibility:hidden
     }
@@ -195,6 +202,7 @@ footer{
         line-height: 1;
         padding: 15px 0;
     }
+    /*gride changed for mobile*/
     .container{
         padding: 15px;
         display: grid;
@@ -554,7 +562,7 @@ footer{
     }
     
 }
-
+/*tablet*/
 @media screen and (min-width: 700px){
     .projects{
         visibility:visible;
@@ -944,7 +952,7 @@ footer{
     }
     
 }
-    
+/*laptop*/
 @media screen and (min-width: 1400px){
     .nav .subnav{
         font-size: 0px;;
@@ -970,7 +978,7 @@ footer{
     .nav ul{
         text-align:left;
     }
-   
+   /*grid*/
     .container{
         padding-top : 50px;
         padding-bottom: 50px;
@@ -1240,7 +1248,7 @@ footer{
         text-align: center;
         padding:15px;
     }
-
+/*flex*/
     .introbox{
         display: flex;
         flex-flow: column nowrap;
@@ -1305,7 +1313,7 @@ footer{
         text-align: center;
         padding:15px;
     }
-
+/*gallery*/
     .gallery{
         display: flex;
         flex-wrap: wrap;
