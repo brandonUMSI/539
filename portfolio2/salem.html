@@ -7,22 +7,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=0FZQPGFJD8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '0FZQPGFJD8');
+    </script>
     <title>Brandon Sapp</title>
   </head>
   <body>
+        <!-- skip to main -->
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
+      <!-- navigation -->
     <div class="nav">
     <nav>
         <ul>
           <li aria-label = "home"><a href="index.html">Home</a></li>
           <li aria-label = "about"><a href="about.html">About</a></li>
           <li aria-label = "contact"><a href="index.html#contact">Contact</a></li>
-          <li aria-label = "Projects" class = "projects"><a href="index.html#projects">Projects</a></li>
-          <div class = "subnav">
+          <li aria-label = "Projects" class = "projects"><a href="index.html#projects" class = "activep">Projects</a></li>
+          <!-- sub navigation -->
+          <ul class = "subnav">
               <li aria-label = "link to learn play act"><a href="learnplayact.html">learn play act</a></li>
               <li aria-label = " link to goodnews"><a href="goodnews.html">good news</a></li>
               <li aria-label = " link to salem"><a href="salem.html"  class = "activep">salem</a></li>
-          </div>
+          </ul>
         </ul>
     </nav>
   </div>
@@ -31,17 +42,19 @@
             <h1>Salem</h1>
         </div>
         <div class = "story">
-            <h3>The Story</h2>
+            <h2>The Story</h2>
             <p>In December of 2018 I accepted a role at Salem Church of God 
               as their resident of Outreach an Communications. I was tasked with 
               coordinating outreach and mission efforts as well as designing Salem's 
               new Web and app Interface</p>
         </div>
     </header>
+     <!-- main -->
     <main id = main>
+         <!-- grid -->
     <div class = "learncontainer">
         <div class = "team">
-            <h3>Constraints</h2>
+            <h2>Constraints</h2>
             <ul>
                 <li>Time</li>
                 <li>Money</li>
@@ -49,7 +62,7 @@
             </ul>
         </div>
         <div class = "objective">
-            <h3>Objective</h2>
+            <h2>Objective</h2>
             <p>Utilize a web management software to design a quick 
               and fast webpage and mobile app to be used to leverage social resources 
               to promote growth and volunteerism. Salem required a web and mobile platform that 
@@ -57,18 +70,20 @@
               and make changes</p>
         </div>
     </div>
+        <!-- parallax image-->
     <div class = "transitionimage3">
     </div>
+      <!-- grid -->
     <div class = "learncontainer2">
         <div class = "projectsolution">
-            <h3>Project Solution</h2>
+            <h2>Project Solution</h2>
             <p>Weighing all of our goals and constraints, I decided to use Subsplash,
                a church based web building platform that was cheap and would be fairly easy 
                for me to train staff with no prior experience. 
               </p>
         </div>
         <div class = "des">
-            <h3>Design Process</h2>
+            <h2>Design Process</h2>
             <p>I broke each aspect of the web and mobile design into easy to chunks
                focusing on each ministry area separately. One each chunk was completed
                 I allowed members of our staff to test and provide feed back. Once a draft of the full 
@@ -77,18 +92,19 @@
                 and website taking into account all the feedback.</p>
         </div>
         <div class = "next">
-            <h3>Results</h2>
+            <h2>Results</h2>
             <p>Since it's deployment our app and website has seen over 1800 downloads. 
               Users have been able to utilize the app to interact with the church follow along with messages, 
               listen to podcast, communicate with each other, sign up to volunteer, schedule visits and so much more!</p>
         </div> 
     </div>
     </main>  
+    <!-- flex -->
     <div class="gallery"> 
-        <img id="image1" src="Images/salem.png" alt="gallery image 1" />
-        <img id="image2" src="Images/tanzania.jpg" alt="gallery image2" />
-        <img id="image3" src="Images/leb.jpg" alt="gallery image 3" />
-        <img id="image4" src="Images/tornado.jpg" alt="gallery image 4" />
+        <img id="image1" src="Images/salem.png" alt="gallery image 1">
+        <img id="image2" src="Images/tanzania.jpg" alt="gallery image2">
+        <img id="image3" src="Images/leb.jpg" alt="gallery image 3">
+        <img id="image4" src="Images/tornado.jpg" alt="gallery image 4">
     </div>
     <footer>
         <p>Brandon Sapp | University of Michigan School of Information </p>

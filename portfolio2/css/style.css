@@ -1,9 +1,10 @@
-html{
-    scroll-behavior: smooth;
-    
-}
 /*Link to write up: https://docs.google.com/document/d/1iAC9PHCfthFRi7zE4Hi2PTQR3I1VcQr9EO9t__LrK0c/edit?usp=sharing */
 /*general styles */
+html{
+    scroll-behavior: smooth;  
+}
+
+
 body{
     font-size: 18px;
     padding: 0;
@@ -14,14 +15,16 @@ body{
       border : 12px;
       border-style : solid;
       border-color:#49BBCC;
+      font-family: sans-serif;
   }
-/* reduced motion*/
-  @media screen and (prefers-reduced-motion: reduce){
-    html{
-        scroll-behavior: auto;
-    }
-  }
+/*gallery fileter using psuedo class*/
+.gallery > img:hover{
+    filter:opacity(25%);
+}
+
+  
 /*highlights current page*/
+/*in tablet and mobile it highlights both projects and sub nav page when on one of the project pages*/
 .nav ul li a.activep 
 {
   color:#49BBCC;
@@ -34,6 +37,11 @@ h1{
     color: #49BBCC;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 
+    0 1px 0 rgb(245, 245, 245),  
+    0 20px 20px  #49BBCC;
+    
 }
     
 h2{
@@ -45,16 +53,12 @@ h3{
     font-size: 32px;
     line-height: 1.5;
     text-align: center;
-    
-        
-
 }
 p{
     font-size: 24pt;
     line-height: 1;
     padding: 50px 0;
-    text-align: center;
-        
+    text-align: center;     
 }
 
 .nav{
@@ -67,11 +71,21 @@ nav ul{
     text-align: right;
     padding:15px;
 }
+/*hit the floor challenge*/
 nav li{
     padding-bottom: 30px;
     display: inline;
     margin: 15px;
     text-align: right;
+    text-shadow: 
+    0 1px 0 #f5f5f5, 
+    0 1.5px 0 #ffffff,
+    0 2px 0 #dcdcdc,
+    0 2.5px 0 #dddddd,  
+    0 3px 0 #c4c4c4,
+    0 3.5px 0 #cccccc,  
+    0 4px 0 #bbbbbb,
+    0 4.5px 0 #ababab;
 }
 nav a{
     color: black;
@@ -79,8 +93,9 @@ nav a{
     text-decoration: none;
 } 
 nav a:hover{
-    text-decoration: underline;
-   
+    text-shadow: 
+    0 1px 0 rgb(245, 245, 245),  
+    0 20px 20px  #49BBCC;
 }
 .skip a{
     background: white;
@@ -91,21 +106,6 @@ nav a:hover{
     -webkit-transition: top 1s ease-out;
     transition: top 1s ease-out;
     z-index: 1;
-}
-.nav .subnav{
-    visibility: hidden;
-    display:inline;
-    -webkit-transition: visibility 2s ;
-    transition: visibility 2s ;
-   
-    
-}
-
-.nav:hover .subnav{
-    width:100%;
-    visibility:visible
-    
-   
 }
 .skip a:focus{
     top: 0px;
@@ -130,11 +130,7 @@ footer{
     padding : 25px;
     justify-content: center;
     max-width: 100%;
-    overflow : hidden;
-    
-    
-    
-    
+    overflow : hidden;  
 }
 
 .contact fieldset{
@@ -148,7 +144,6 @@ footer{
 .cform{
     padding: 15px;
 }
-
 
 #submit{
     width: 100%;
@@ -183,10 +178,11 @@ footer{
     .nav:hover .subnav{
         visibility: hidden;
     }
+     /*header*/
     .intro{
         text-align: center;
     }
-
+     /*header paragraph*/
     .intro p{
         border : 0px;
         padding : 25px;
@@ -215,81 +211,48 @@ footer{
         max-width:100%;
 
     }
-   
-
     .learn{
 
         grid-column: 1 / span 3;
         grid-row-start: 1;
         grid-row-end: 2;
         text-align: center;
-        max-width:100%;
-        
-        
-        
-       
-        
-       
-        
+        max-width:100%;    
     }
 
     .learn img{
         max-width:100%;
     }
-
-
-
-    
-    
-
     .learninfo{
     
         grid-column: 1 / span 3;
         grid-row-start: 3;
-        grid-row-end: 4;
-        
-        
-        overflow: hidden;
-        
-       
-        text-align: center;
-        
-       
+        grid-row-end: 4;      
+        overflow: hidden;     
+        text-align: center;    
         
     }
-    
-    
+     
     .learninfo p{
-        text-align: center;
-        
-       
-       
+        text-align: center;     
     }
 
-
-
-    
-    
-    
     .gni{
         grid-column: 1 / span 3;
         grid-row-start: 7;
         grid-row-end: 8;
         overflow: hidden;
         width: 100%;
-        text-align: center;
-        
+        text-align: center;        
     }
 
     .gni p{
-        text-align: center;
-       
+        text-align: center;      
     }
 
     .goodnews img{
         max-width:100%;
     }
-    
     
     .saleminfo{
         grid-column: 1 / span 3;
@@ -297,21 +260,17 @@ footer{
         grid-row-end: 12;
         overflow: hidden;
         width: 100%;
-        text-align: center;
-        
-    
+        text-align: center; 
     }
 
     .saleminfo p{
-        text-align: center;
-        
+        text-align: center;    
     }
 
     .salem img{
         max-width:100%;
     }
 
-    
     .goodnews{
         
         grid-column: 1 / span 3;
@@ -331,6 +290,7 @@ footer{
     .nav ul{
         text-align:center;
     }
+     /*grid display for project pages*/
     .learncontainer{
         display: grid;
         grid-template-columns: auto auto auto;
@@ -338,8 +298,7 @@ footer{
         
     
     }
-    .story{
-        
+    .story{      
         margin: 0px;
         text-align: center;
         padding:15px;
@@ -375,7 +334,7 @@ footer{
         font-size: 24pt;
         text-align: center;
     }
-
+/*grid display for project pages*/
     .learncontainer2{
         display: grid;
         grid-template-columns: auto auto auto;
@@ -391,7 +350,7 @@ footer{
         text-align: center;
         
     }
-
+/*parallax image 1*/
     .transitionimage{
         background-attachment: fixed; 
         background-image:url("../Images/data.png");  
@@ -403,7 +362,7 @@ footer{
         margin: 0px;
         max-width:100%;                
     }
-
+/*parallax image 2*/
     .transitionimage2{
         background-attachment: fixed; 
         background-image:url("../Images/goodnewspt.png");  
@@ -415,7 +374,7 @@ footer{
         max-width:100%;  
                     
     }
-
+/*parallax image 3*/
     .transitionimage3{
         background-attachment: fixed; 
         background-image:url("../Images/salempar.png");  
@@ -461,14 +420,12 @@ footer{
         
     }
 
-    
+  /*flex display for about page*/  
     .introbox{
         display: flex;
         flex-flow: column nowrap;
         overflow: hidden;
-        padding: 15px;
-        
-        
+        padding: 15px;   
     }
 
     .introimg img{
@@ -476,8 +433,7 @@ footer{
         max-width:100%;
     }
     
-    
-        
+/*flex display for about page*/  
     .aboutbox{
         
         display: flex;
@@ -494,8 +450,6 @@ footer{
         padding:15px;
     }
     
-    
-
     .about2{
         text-align: center;
        
@@ -503,24 +457,18 @@ footer{
 
     .abtimg img{
        overflow: hidden;
-       max-width:100%;
-       
-       
+       max-width:100%;   
         
     }
 
-    
-
-    .problembox{
-        
+/*flex display for about page*/  
+    .problembox{       
         display: flex;
         flex-wrap: nowrap; 
         align-content: space-between;
         flex-flow: column nowrap;
         overflow:hidden;
         padding: 15px;
-       
-
     }
 
     
@@ -538,7 +486,7 @@ footer{
         overflow:hidden;
         max-width:100%;
     }
-
+/*flex display for gallery*/  
     .gallery{
         display: flex;
         flex-wrap: wrap;
@@ -549,7 +497,6 @@ footer{
         padding : 25px;
     }
 
-
     .gallery > img{
         border: 10px rgb(245, 245, 245) solid;
         margin: 10px;
@@ -558,15 +505,16 @@ footer{
     }
 
     .projects{
-        visibility:visible;
+        visibility:hidden;
     }
     
 }
-/*tablet*/
+/*tablet view*/
 @media screen and (min-width: 700px){
     .projects{
         visibility:visible;
     }
+/*animation for nav bar*/  
     .nav .subnav{
         font-size: 0px;;
         display:inline;
@@ -576,10 +524,6 @@ footer{
        
         
     }
-
-    .projects{
-        visibility:visible;
-    }
     
     .nav:hover .subnav{
         width:100%;
@@ -588,6 +532,7 @@ footer{
         
        
     }
+
     .intro{
         text-align: center;
     }
@@ -607,6 +552,7 @@ footer{
         line-height: 1;
         padding: 15px 0;
     }
+    /*frid for home page*/  
     .container{
         padding: 15px;
         display: grid;
@@ -619,7 +565,6 @@ footer{
         max-width:100%;
 
     }
-   
 
     .learn{
 
@@ -627,13 +572,7 @@ footer{
         grid-row-start: 1;
         grid-row-end: 2;
         text-align: center;
-        max-width:100%;
-        
-        
-        
-       
-        
-       
+        max-width:100%;   
         
     }
 
@@ -641,40 +580,19 @@ footer{
         max-width:100%;
     }
 
-
-
-    
-    
-
     .learninfo{
-    
         grid-column: 1 / span 3;
         grid-row-start: 3;
-        grid-row-end: 4;
-        
-        
+        grid-row-end: 4; 
         overflow: hidden;
-        
-       
-        text-align: center;
-        
-       
-        
+        text-align: center;    
     }
     
     
     .learninfo p{
-        text-align: center;
-        
-       
-       
+        text-align: center; 
     }
 
-
-
-    
-    
-    
     .gni{
         grid-column: 1 / span 3;
         grid-row-start: 7;
@@ -702,13 +620,10 @@ footer{
         overflow: hidden;
         width: 100%;
         text-align: center;
-        
-    
     }
 
     .saleminfo p{
-        text-align: center;
-        
+        text-align: center;  
     }
 
     .salem img{
@@ -716,8 +631,7 @@ footer{
     }
 
     
-    .goodnews{
-        
+    .goodnews{  
         grid-column: 1 / span 3;
         grid-row-start: 5;
         grid-row-end: 6;
@@ -735,6 +649,7 @@ footer{
     .nav ul{
         text-align:left;
     }
+    /*grid display for projects*/  
     .learncontainer{
         display: grid;
         grid-template-columns: auto auto auto;
@@ -779,7 +694,7 @@ footer{
         font-size: 24pt;
         text-align: center;
     }
-
+/*grid display for projects*/  
     .learncontainer2{
         display: grid;
         grid-template-columns: auto auto auto;
@@ -795,7 +710,7 @@ footer{
         text-align: center;
         
     }
-
+/*parallax image 1*/
     .transitionimage{
         background-attachment: fixed; 
         background-image:url("../Images/data.png");  
@@ -807,7 +722,7 @@ footer{
         margin: 0px;
         max-width:100%;                
     }
-
+/*parallax image 2*/
     .transitionimage2{
         background-attachment: fixed; 
         background-image:url("../Images/goodnewspt.png");  
@@ -865,7 +780,7 @@ footer{
         
     }
 
-    
+ /*flex display for about*/     
     .introbox{
         display: flex;
         flex-flow: column nowrap;
@@ -878,6 +793,7 @@ footer{
     text-align: right;
     
     }
+/*flex display for about*/     
     .aboutbox{
         
         display: flex;
@@ -903,7 +819,7 @@ footer{
     .about2{
         text-align: center;
     }
-
+/*flex display for about*/     
     .problembox{
         
         display: flex;
@@ -930,7 +846,7 @@ footer{
         text-align: center;
         padding:15px;
     }
-
+/*flex display for about*/     
     .gallery{
         display: flex;
         flex-wrap: wrap;
@@ -941,9 +857,6 @@ footer{
         
         padding : 25px;
     }
-
-
-
     .gallery > img{
         border: 10px rgb(245, 245, 245) solid;
         margin: 10px;
@@ -954,13 +867,12 @@ footer{
 }
 /*laptop*/
 @media screen and (min-width: 1400px){
+/*animation for nav bar*/     
     .nav .subnav{
         font-size: 0px;;
         display:inline;
         -webkit-transition: font-size  5s;
-        transition: font-size  5s ;
-        
-       
+        transition: font-size  5s ; 
         
     }
 
@@ -975,10 +887,11 @@ footer{
         
        
     }
+    /*change nav bar position*/     
     .nav ul{
         text-align:left;
     }
-   /*grid*/
+   /*grid for home*/
     .container{
         padding-top : 50px;
         padding-bottom: 50px;
@@ -989,8 +902,6 @@ footer{
         width: 100vw; 
         
     }
-
-
     .intro{
         max-height: 700px;
         text-align: center; 
@@ -1018,7 +929,6 @@ footer{
         text-align: right;
         padding-bottom: 100px; 
     }
-
 
     .learninfo{
         
@@ -1091,7 +1001,7 @@ footer{
         text-align: right;
     }
 
-
+ /*grid for projects*/
     .learncontainer{
         display: grid;
         grid-template-columns: auto auto;
@@ -1099,10 +1009,7 @@ footer{
         border-top : 12px;
         border-bottom: 12px;
         border-style : solid;
-        border-color:#49BBCC;
-        
-
-    
+        border-color:#49BBCC; 
     }
 
     .team{
@@ -1111,9 +1018,7 @@ footer{
         grid-row-end: 2;
         font-size: 24pt; 
         margin-top: 25%;
-        text-align:right;
-        
-        
+        text-align:right;      
     }
 
     .team li{
@@ -1146,7 +1051,7 @@ footer{
     }
 
     
-
+ /*grid for projects*/
     .learncontainer2{
         display: grid;
         grid-template-columns: auto auto;
@@ -1164,7 +1069,7 @@ footer{
         text-align: center;
         padding:15px;
     }
-
+ /*parallax 1*/
     .transitionimage{
         background-attachment: fixed; 
         background-image:url("../Images/data.png");  
@@ -1175,7 +1080,7 @@ footer{
         height: 500px;
         margin: 0px;                
     }
-
+ /*parallax 2*/
     .transitionimage2{
         background-attachment: fixed; 
         background-image:url("../Images/goodnewspt.png");  
@@ -1186,7 +1091,7 @@ footer{
         height: 500px;  
                     
     }
-
+/*parallax 3*/
     .transitionimage3{
         background-attachment: fixed; 
         background-image:url("../Images/salempar.png");  
@@ -1215,9 +1120,7 @@ footer{
 
     .desgn > img{
         margin: 0px;
-        max-width: 100%;
-        
-        
+        max-width: 100%;   
     }
 
     .desgn{
@@ -1261,6 +1164,7 @@ footer{
     text-align: right;
     
     }
+/*flex*/
     .aboutbox{
         margin: 150px;
         display: flex;
@@ -1286,7 +1190,7 @@ footer{
     .about2{
         text-align: center;
     }
-
+/*flex*/
     .problembox{
         margin: 165px;
         display: flex;
@@ -1314,6 +1218,7 @@ footer{
         padding:15px;
     }
 /*gallery*/
+/*flex*/
     .gallery{
         display: flex;
         flex-wrap: wrap;
@@ -1335,3 +1240,26 @@ footer{
     
 }
 
+@media (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; 
+        transition:none;
+        -webkit-transition:none;
+        transform:none;
+        animation:none;   
+    }
+    .skip a{
+        transition: none;
+        -webkit-transition:none;
+    }
+
+    .nav .subnav{
+        transition:none;
+        -webkit-transition:none;
+        transform:none;
+        animation:none;   
+
+
+    }
+    
+}

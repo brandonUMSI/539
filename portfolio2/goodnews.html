@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <!-- this page changes in mobile, laptop and tablet view -->
-
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=0FZQPGFJD8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '0FZQPGFJD8');
+    </script>
     <title>Brandon Sapp</title>
   </head>
   <body>
+      <!-- skip to main -->
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <!-- navigation-->
     <div class="nav">
     <nav>
         <ul>
           <li aria-label = "home"><a href="index.html">Home</a></li>
           <li aria-label = "about"><a href="about.html">About</a></li>
           <li aria-label = "contact"><a href="index.html#contact">Contact</a></li>
-          <li aria-label = "Projects" class = "projects"><a href="index.html#projects">Projects</a></li>
-          <div class = "subnav">
+          <li aria-label = "Projects" class = "projects"><a href="index.html#projects" class = "activep">Projects</a></li>
+          <!-- sub navigation-->
+          <ul class = "subnav">
               <li aria-label = "link to learn play act"><a href="learnplayact.html">learn play act</a></li>
               <li aria-label = " link to goodnews"><a href="goodnews.html"  class = "activep">good news</a></li>
               <li aria-label = " link to salem"><a href="salem.html">salem</a></li>
-          </div>
+          </ul>
         </ul>
     </nav>
   </div>
@@ -33,56 +42,61 @@
             <h1>Good News</h1>
         </div>
         <div class = "story">
-            <h3>The Story</h2>
+            <h2>The Story</h2>
             <p>This idea and problem came to my realization this summer. My friend, Kyle, go travels the world helping organization sharing stories of all the good these organizations were doing. I got to travel with him to Lebanon where we assisted Syrian refugees staying in that country. Before departing though, most people in my town were shocked and worried because of how dangerous they felt the area was. My experience there was far different though and it was amazing to see the work organizations there were doing that almost no one knew about. It seemed that most people had no idea of all the good that was happening around them.  </p>
         </div>
     </header>
+    <!-- main -->
     <main id = main>
+         <!-- grid-->
     <div class = "learncontainer">
         <div class = "team">
-            <h3>Duration</h2>
+            <h2>Duration</h2>
             <ul>
                 <li>3 Months</li>
             </ul>
-            <h3>Course</h2>
+            <h2>Course</h2>
             <ul>
                 <li>SI582 Interaction Design</li>
             </ul>
-            <h3>Team</h2>
+            <h2>Team</h2>
             <ul>
                 <li>Individual</li>
             </ul>
-            <h3>Role</h2>
+            <h2>Role</h2>
             <ul>
                 <li>UX Designer</li>
             </ul>
 
         </div>
         <div class = "objective">
-            <h3>Objective</h2>
+            <h2>Objective</h2>
             <p>I am hoping that through this service I can address the problems non-profits often face with securing funding while increasing aid given to underrepresented and underserved communities while at the same time raising community awareness and sharing news about the work non-profits are doing everywhere to make the world a better place. </p>
         </div>
     </div>
+      <!-- parallax-->
     <div class = "transitionimage2">
     </div>
+      <!-- grid-->
     <div class = "learncontainer2">
         <div class = "projectsolution">
-            <h3>Project Progress</h2>
+            <h2>Project Progress</h2>
             <p>My first step was to begin a competitive analysis on existing services that may provide similar functionality. From there, I conducted several need finding interviews. From that information I was able to design several user personas and scenarios of the potential product. Recently, I was able to design user interaction flows and story maps outlining, the journey a user would take interacting with the service</p>
         </div>
         <div class = "desgn">
             <img src="Images/desprocess.png" alt="My design process">
         </div>
         <div class = "next">
-            <h3>What's Next</h2>
+            <h2>What's Next</h2>
             <p>The next step in the process is to develop a paper prototype of the product interface. From there, I'll be able to gain user feedback and iterate my design.</p>
         </div>     
     </div>
     </main>
+      <!-- flex-->
     <div class="gallery"> 
-        <img id="image1" src="Images/goodnews1.png" alt="gallery image 1" />
-        <img id="image2" src="Images/goodnews2.png" alt="gallery image2" />
-        <img id="image3" src="Images/goodnews3.jpg" alt="gallery image3" />
+        <img id="image1" src="Images/goodnews1.png" alt="gallery image 1">
+        <img id="image2" src="Images/goodnews2.png" alt="gallery image2">
+        <img id="image3" src="Images/goodnews3.jpg" alt="gallery image3">
     </div>
 
 
